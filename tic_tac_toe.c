@@ -16,8 +16,7 @@ void check_draw();
 void draw_board();
 void player_first();
 void put_X_O(char ch,int pos);
-COORD coord= {0,0}; // this is global variable
-//center of axis is set to the top left cornor of the screen
+COORD coord= {0,0}; 
 void gotoxy(int x,int y)
 {
     coord.X=x;
@@ -170,7 +169,7 @@ void player_first()
     check_draw();
     draw_board();
     gotoxy(30,18);
-    printf("Your Turn :> ");
+    printf("Your Turn :> \t");
     scanf("%d",&pos);
 
     if(board[pos] != 2)
@@ -181,8 +180,7 @@ void player_first()
         go(pos);
         draw_board();
         gotoxy(30,20);
-        //textcolor(128+RED);
-        printf("Player Wins");
+        printf("\nPlayer Wins");
         getch();
         exit(0);
     }
@@ -211,8 +209,7 @@ void start_game()
     if(flag)
     {
         gotoxy(30,20);
-        //textcolor(128+RED);
-        printf("Computer wins");
+        printf("\nComputer wins");
         getch();
     }
     else
@@ -224,8 +221,7 @@ void check_draw()
     if(turn > 9)
     {
         gotoxy(30,20);
-        //textcolor(128+RED);
-        printf("Game Draw");
+        printf("\nGame Draw");
         getch();
         exit(0);
     }
