@@ -1,3 +1,5 @@
+//Tic-Tac-Toe project by Tanish Jindal
+
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
@@ -35,7 +37,7 @@ void menu()
 {
     int choice;
     system("cls");
-    printf("\n--------MENU--------");
+    printf("\n-----Welcome to the Game ----- ");
     printf("\n1 : Play with X");
     printf("\n2 : Play with O");
     printf("\n3 : Exit");
